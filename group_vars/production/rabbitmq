@@ -1,0 +1,3 @@
+rabbitmq:
+  host: pennsylvania.example.com
+  port: 5672

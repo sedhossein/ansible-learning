@@ -1,0 +1,10 @@
+db:
+  user: widgetuser
+  password: pFmMxcyD;Fc6)6
+  name: widget_production
+  primary:
+    host: rhodeisland.example.com
+    port: 5432
+  replica:
+    host: virginia.example.com
+    port: 5432
