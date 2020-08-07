@@ -9,43 +9,43 @@ Note that the syntax changes when you are specifying a group of groups, as oppos
 to a group of hosts. That’s so Ansible knows to interpret web and task as groups and
 not as hosts.
 ```ini
-    [production]
-    delaware.example.com
-    georgia.example.com
-    maryland.example.com
-    newhampshire.example.com
-    newjersey.example.com
-    newyork.example.com
-    northcarolina.example.com
-    pennsylvania.example.com
-    rhodeisland.example.com
-    virginia.example.com
+[production]
+delaware.example.com
+georgia.example.com
+maryland.example.com
+newhampshire.example.com
+newjersey.example.com
+newyork.example.com
+northcarolina.example.com
+pennsylvania.example.com
+rhodeisland.example.com
+virginia.example.com
 
-    [staging]
-    ontario.example.com
-    quebec.example.com
+[staging]
+ontario.example.com
+quebec.example.com
 
-    [vagrant]
-    vagrant1 ansible_host=127.0.0.1 ansible_port=2222 color=red
-    vagrant2 ansible_host=127.0.0.1 ansible_port=2200 color=green
-    vagrant3 ansible_host=127.0.0.1 ansible_port=2201 color=purple
+[vagrant]
+vagrant1 ansible_host=127.0.0.1 ansible_port=2222 color=red
+vagrant2 ansible_host=127.0.0.1 ansible_port=2200 color=green
+vagrant3 ansible_host=127.0.0.1 ansible_port=2201 color=purple
 
-    [lb]
-    delaware.example.com
+[lb]
+delaware.example.com
 
-    [web]
-    georgia.example.com
-    newhampshire.example.com
-    newjersey.example.com
-    ontario.exam
+[web]
+georgia.example.com
+newhampshire.example.com
+newjersey.example.com
+ontario.exam
 
-    [web-smart]
-    web[01:20].example.com
-    web-[a-t].example.com
+[web-smart]
+web[01:20].example.com
+web-[a-t].example.com
 
-    [django:children]
-    web
-    task
+[django:children]
+web
+task
 ```
 
 #### 2. This doesn’t work
