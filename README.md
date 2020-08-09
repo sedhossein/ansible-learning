@@ -42,7 +42,7 @@ ontario.exam
 [web-smart]
 web[01:20].example.com
 web-[a-t].example.com
-
+python manage.py createdb
 [django:children]
 web
 task
