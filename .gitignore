@@ -1,5 +1,5 @@
 .vagrant
 .vscode
-vagrant
-excersices/venv/
+.samples/venv/
+.vagrant
 sl-devq
