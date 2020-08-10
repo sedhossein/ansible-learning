@@ -1,4 +1,0 @@
-[webservers]
-vagrant1 ansible_ssh_user=root ansible_host=127.0.0.1 ansible_port=2201 ansible_private_key_file=/home/sedhossein/.vagrant.d/insecure_private_key
-vagrant2 ansible_ssh_user=root ansible_host=127.0.0.1 ansible_port=2202 ansible_private_key_file=/home/sedhossein/.vagrant.d/insecure_private_key
-vagrant3 ansible_ssh_user=root ansible_host=127.0.0.1 ansible_port=2203 ansible_private_key_file=/home/sedhossein/.vagrant.d/insecure_private_key
