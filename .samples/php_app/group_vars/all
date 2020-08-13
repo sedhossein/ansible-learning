@@ -1,0 +1,46 @@
+ # You shouldn't need to change this.
+mysql_port: 3306
+
+
+# Disable All Updates
+# By default automatic updates are enabled, set this value to true to disable all automatic updates
+auto_up_disable: false
+
+#Define Core Update Level
+#true  = Development, minor, and major updates are all enabled
+#false = Development, minor, and major updates are all disabled
+#minor = Minor updates are enabled, development, and major updates are disabled
+core_update_level: true
+
+home_dir: "/home/username"
+projects_root: /var/www
+web_root: /var/www/sites
+repos_root: /var/www/repos
+
+username: username
+groupname: username
+
+apps:
+  - www.site.com
+
+php_memory_limit: 512M
+php_max_execution_time: 60
+php_post_max_size: 100M
+php_upload_max_filesize: 100M
+php_display_errors: On
+php_display_startup_errors: On
+php_html_errors: On
+php_date_timezone: Asia/Tehran
+
+
+
+# MySQL Settings
+mysql_port: 3306
+mysql_root_password: MYSQL_PASSWORD
+dbuser: MYSQL_USER
+dbpass: MYSQL_PASSWORD
+
+# MySQL my.cnf settings
+mysql_max_allowed_packet: 128M
+mysql_character_set_server: utf8
+mysql_collation_server: utf8_general_ci

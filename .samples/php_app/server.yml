@@ -1,0 +1,17 @@
+---
+- name: Provision LEMP and related tools
+  hosts: web
+  become: true
+  gather_facts: yes
+#  sudo: yes
+  #user: root
+  # remote_user: user
+
+  roles:
+     - update
+     - git
+     - nginx
+     - php
+     - mysql
+     - initapps
+     - restartsvcs

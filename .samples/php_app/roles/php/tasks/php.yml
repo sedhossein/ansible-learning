@@ -1,0 +1,65 @@
+---
+- name: PHP | Add php-7.4 PPA
+  apt_repository: repo='ppa:ondrej/php'
+                  state=present
+                  update_cache=yes
+  become: true
+
+- name: PHP | install php packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - php7.4-fpm
+    - php7.4-cli
+    - php7.4-common
+    - php7.4-curl
+    - php7.4-json
+    - php7.4-gd
+    - php7.4-mcrypt
+    - php7.4-odbc
+    - php7.4-pgsql
+    - php7.4-mbstring
+    - php7.4-mysql
+    - php7.4-xmlrpc
+    - php7.4-opcache
+    - php7.4-intl
+    - php7.4-bz2
+    - php7.4-xml
+  become: true
+
+- name: PHP | FPM php.ini
+  template:
+    src=php.ini.j2
+    dest=/etc/php/7.4/fpm/php.ini
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  become: true
+
+- name: PHP | CLI php.ini
+  template:
+    src=php.ini.j2
+    dest=/etc/php/7.4/cli/php.ini
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  become: true
+
+- name: PHP | configure opcache
+  template:
+    src=opcache.ini.j2
+    dest=/etc/php/7.4/mods-available/opcache.ini
+    backup=yes
+    owner=root
+    group=root
+    mode=0644
+  become: true
+
+- name: PHP | restart nginx
+  raw: service nginx restart
+  become: true
+
+- name: PHP | restart fpm
+  raw: service php7.4-fpm restart
+  become: true
